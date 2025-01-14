@@ -1,0 +1,17 @@
+{
+    "name": "maitr/planning",
+    "autoload": {
+        "psr-4": {
+            "Maitr\\Planning\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MAITRIYA SRAMANER",
+            "email": "maitriya@outlook.fr"
+        }
+    ],
+    "require": {
+        "mongodb/mongodb": "^1.20"
+    }
+}
