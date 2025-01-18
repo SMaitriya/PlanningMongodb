@@ -61,69 +61,58 @@ table {
     border: 2px solid #8b7355;
 }
 
-th, td {
-    padding: 8px;
+td {
+    padding: 15px;
     text-align: left;
     border: 1px solid #8b7355;
-    font-size: 14px;
     color: #614e3c;
 }
 
 .date {
-    display: inline-block;
-    min-width: 70px;
-    font-weight: 700;
-    font-size: 13px;
-    color: #614e3c;
-}
-
-select {
-    width: 120px;
-    padding: 6px 10px;
-    border: 2px solid #8b7355;
-    border-radius: 4px;
-    background-color: #fdf6e3;
-    font-size: 13px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-    font-family: 'Courier New', monospace;
-    color: #614e3c;
-}
-
-select:hover {
-    border-color: #614e3c;
-    background-color: #f4e4bc;
-}
-
-select:focus {
-    outline: none;
-    border-color: #614e3c;
-    box-shadow: 0 0 0 2px rgba(139, 115, 85, 0.25);
-}
-
-.submit-button {
     display: block;
-    width: 200px;
-    margin: 20px auto;
-    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #614e3c;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+    background: #e6d5b8;
+    border-radius: 4px;
+    border: 1px solid #8b7355;
+}
+
+.assignee {
+    display: block;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    background: #d4c4a8;
+    border: 1px solid #8b7355;
+    color: #614e3c;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.assignee.not-assigned {
+    background: #ecd5d5;
+    color: #8b4545;
+    border-color: #8b4545;
+}
+
+.edit-button {
     background-color: #8b7355;
     color: #fdf6e3;
-    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    font-family: 'Courier New', monospace;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 3px 3px 0px #614e3c;
+    box-shadow: 2px 2px 0px #614e3c;
+    border: 1px solid #614e3c;
 }
 
-.submit-button:hover {
+.edit-button:hover {
     background-color: #614e3c;
     transform: translate(1px, 1px);
-    box-shadow: 2px 2px 0px #614e3c;
+    box-shadow: 1px 1px 0px #614e3c;
 }
 
 .statistics {
@@ -189,12 +178,34 @@ select:focus {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .year-selector a {
+        padding: 6px 12px;
+        margin: 3px;
+    }
+
+    .edit-button {
+        display: block;
+        margin: 10px auto 0;
+        width: fit-content;
+    }
+
     .statistics {
         padding: 15px;
     }
+
     .stats-grid {
         grid-template-columns: 1fr;
     }
 }
-
-

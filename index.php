@@ -106,16 +106,18 @@ $nbRows = ceil(count($planningsArray) / $nbColumns);
             '$sort' => ['count' => 1]
         ]
     ])->toArray();
-
+    
     echo "<div class='statistics'>";
     echo "<h2>Statistiques par ordre croissant</h2>";
-    echo "<ul>";
-    $i = 1;
+    echo "<div class='stats-grid'>";
     foreach($stats as $stat) {
-        echo "<li>" . $i . ". " . ucfirst($stat['_id']) . " : " . $stat['count'] . "</li>";
-        $i++;
+        echo "<div class='stat-card'>";
+        echo "<div class='stat-name'>" . ucfirst($stat['_id']) . "</div>";
+        echo "<div class='stat-count'>" . $stat['count'] . "</div>";
+        echo "<div class='stat-label'>corvées</div>";
+        echo "</div>";
     }
-    echo "</ul>";
+    echo "</div>";
     echo "</div>";
 ?>
 
