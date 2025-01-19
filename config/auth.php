@@ -1,6 +1,6 @@
 <?php
 session_start(); // Pour garder l'utilisateur connecté
-require_once __DIR__ . '/database.php';  // Pour la base de données
+require_once __DIR__ . '/database.php';  
 
 // Vérifie si quelqu'un est connecté 
 function isAuthenticated() {     

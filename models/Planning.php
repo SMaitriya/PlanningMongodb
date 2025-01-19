@@ -10,10 +10,9 @@ try {
         exit;
     }
     
-    $years = [2024, 2025, 2026, 2027];  // Correction : $years au lieu de $year
-    $plannings = [];  // Correction : $plannings au lieu de $pannings
+    $years = [2024, 2025, 2026, 2027];  
+    $plannings = []; 
     
-    // Pour chaque année
     foreach($years as $year) {  
         // Trouver le premier dimanche de l'année
         $startDate = new DateTime($year . '-01-01');

@@ -1,6 +1,6 @@
 <?php
-require_once 'config/database.php';
-require_once 'config/auth.php';
+require_once '../config/database.php';
+require_once '../config/auth.php';
 
 // Initialisation de la connexion MongoDB et sélection de la collection des plannings
 $client = getConnection();
@@ -23,7 +23,6 @@ $nbRows = ceil(count($planningsArray) / $nbColumns);
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/auth.css">
    <title>Planning des corvées - Vue générale</title>
@@ -42,15 +41,10 @@ $nbRows = ceil(count($planningsArray) / $nbColumns);
            <?php endforeach; ?>
        </div>
 
-       <!-- Affichage conditionnel des boutons selon l'authentification -->
-       <div class="nav-buttons">
-           <?php if (!isAuthenticated()): ?>
-               <a href="login.php" class="nav-button login-button">Connexion</a>
-           <?php else: ?>
-               <a href="index.php" class="nav-button edit-button">Mode édition</a>
-           <?php endif; ?>
-       </div>
-   </div>
+    <!-- Affichage du bouton de connexion -->
+<div class="nav-buttons">
+    <a href="login.php" class="nav-button login-button">Connexion</a>
+</div>
 
    <!-- Conteneur principal du planning -->
    <div class="planning-container">

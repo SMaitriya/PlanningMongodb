@@ -1,0 +1,48 @@
+FONCTIONNALITÉS DÉVELOPPÉES
+
+
+- Système d'authentification (login/logout) [FIABLE] (toto/tata) (vincent/tata)
+
+Login sécurisé avec sessions
+Déconnexion fonctionnelle
+Protection des routes nécessitant une authentification
+
+
+- Gestion du planning [FINALISÉ]
+
+Affichage du planning par année
+Navigation entre les années (2024-2027)
+Vue en mode lecture pour les utilisateurs non connectés
+Vue en mode édition pour les utilisateurs connectés
+
+
+- Assignation des corvées [FIABLE]
+
+Interface d'assignation en mode édition
+Sélection des utilisateurs via liste déroulante
+Sauvegarde des assignations en base de données
+
+
+- Statistiques [FINALISÉ]
+
+Affichage du nombre de corvées par utilisateur
+Tri par ordre croissant
+Mise à jour automatique après chaque assignation
+
+
+
+
+FONCTIONNALITÉS PERSONNELLES
+
+
+
+- Design responsive [FINALISÉ]
+- Interface utilisateur améliorée 
+
+
+
+NOTES TECHNIQUES
+
+Les fichiers CSS sont organisés en deux parties : style.css et auth.css
+Les scripts de création sont dans un dossier séparé
+Connexion avec login toto / tata

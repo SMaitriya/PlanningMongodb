@@ -1,6 +1,6 @@
 <?php
-require_once 'config/database.php'; 
-require_once 'config/auth.php';     
+require_once '../config/database.php';
+require_once '../config/auth.php';
 
 // Variable pour stocker message d'erreur 
 $error = null;  
@@ -13,11 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
    // connexion avec les identifiants
    if (login($username, $password)) {
-       // Si connexion OK -> page d'accueil
-       header('Location: index.php');
+       header('Location: admin.php');
        exit();
    } else {
-       // Si connexion échoue -> message d'erreur
        $error = "Identifiants incorrects";
    }
 }
@@ -53,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
         
         <div class="back-link">
-            <a href="home.php">Retour à l'accueil</a>
+            <a href="index.php">Retour à l'accueil</a>
         </div>
     </div>
 </body>
