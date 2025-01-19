@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
         
         <div class="back-link">
-            <a href="index.php">Retour à l'accueil</a>
+            <a href="../index.php">Retour à l'accueil</a>
         </div>
     </div>
 </body>
