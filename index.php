@@ -1,5 +1,7 @@
 <?php
 require_once 'config/database.php';
+require_once 'config/auth.php';
+requireAuth();
 
 $client = getConnection();
 $collection = $client->Planning->schedules;
@@ -18,11 +20,15 @@ $nbRows = ceil(count($planningsArray) / $nbColumns);
 <html>
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
     <title>Planning des corvées</title>
 </head>
 <body>
     <h1>Planning des corvées d'épluchage</h1>
     
+
+
+    <div class="navigation-container">
     <div class="year-selector">
         Année : 
         <?php foreach([2024, 2025, 2026, 2027] as $y): ?>
@@ -31,6 +37,12 @@ $nbRows = ceil(count($planningsArray) / $nbColumns);
             </a>
         <?php endforeach; ?>
     </div>
+
+    <div class="nav-buttons">
+        <span class="user-info">Salut <?php echo htmlspecialchars($_SESSION['user']['username']); ?></span>
+        <a href="logout.php" class="nav-button logout-button">Déconnexion</a>
+    </div>
+</div>
 
     <form method="POST">
     <table>
